@@ -33,3 +33,4 @@ Cuando hagamos un cambio en las clases es necesario hacer una migración. Para e
 Despues de que hagamos una migración, es necesario actualizar la base de datos. Para ello se utiliza el comando `dotnet ef Database Update`, que escribirá los cambios de la ultima migración. Es posible que falle, pues algunas cosas no pueden ser cambiadas (por ejemplo eliminar una columna que ya tiene datos, cambiar el nombre, etc.). Si falla, lo más facil es borrar el archivo .db y borrar todo el contenido de Migrations y volver a crear una migración.
 
 ## Aqui dejo un video de la configuración.
+[![Proyecto de Base de datos. 1. Configuración Entity Framework Core](https://img.youtube.com/vi/5eYTvWp_-W8/0.jpg)](https://www.youtube.com/watch?v=5eYTvWp_-W8)
