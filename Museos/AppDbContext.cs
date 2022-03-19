@@ -10,6 +10,7 @@ namespace Museos
 {
     class AppDbContext : DbContext
     {
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=base_de_datos.db;Cache=Shared");

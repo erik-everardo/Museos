@@ -28,20 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.buttonOpenAdmin = new System.Windows.Forms.Button();
+            this.buttonOpenPublic = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // buttonOpenAdmin
+            // 
+            this.buttonOpenAdmin.Location = new System.Drawing.Point(12, 109);
+            this.buttonOpenAdmin.Name = "buttonOpenAdmin";
+            this.buttonOpenAdmin.Size = new System.Drawing.Size(305, 23);
+            this.buttonOpenAdmin.TabIndex = 0;
+            this.buttonOpenAdmin.Text = "Administrador";
+            this.buttonOpenAdmin.UseVisualStyleBackColor = true;
+            // 
+            // buttonOpenPublic
+            // 
+            this.buttonOpenPublic.Location = new System.Drawing.Point(12, 138);
+            this.buttonOpenPublic.Name = "buttonOpenPublic";
+            this.buttonOpenPublic.Size = new System.Drawing.Size(305, 23);
+            this.buttonOpenPublic.TabIndex = 1;
+            this.buttonOpenPublic.Text = "Público";
+            this.buttonOpenPublic.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(329, 177);
+            this.Controls.Add(this.buttonOpenPublic);
+            this.Controls.Add(this.buttonOpenAdmin);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Button buttonOpenAdmin;
+        private Button buttonOpenPublic;
     }
 }
