@@ -40,6 +40,7 @@
             this.buttonOpenAdmin.TabIndex = 0;
             this.buttonOpenAdmin.Text = "Administrador";
             this.buttonOpenAdmin.UseVisualStyleBackColor = true;
+            this.buttonOpenAdmin.Click += new System.EventHandler(this.buttonOpenAdmin_Click);
             // 
             // buttonOpenPublic
             // 
@@ -49,6 +50,7 @@
             this.buttonOpenPublic.TabIndex = 1;
             this.buttonOpenPublic.Text = "Público";
             this.buttonOpenPublic.UseVisualStyleBackColor = true;
+            this.buttonOpenPublic.Click += new System.EventHandler(this.buttonOpenPublic_Click);
             // 
             // Form1
             // 
@@ -59,6 +61,7 @@
             this.Controls.Add(this.buttonOpenAdmin);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
 
         }
