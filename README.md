@@ -35,5 +35,25 @@ Despues de que hagamos una migración, es necesario actualizar la base de datos.
 ## Aqui dejo un video de la configuración.
 [![Proyecto de Base de datos. 1. Configuración Entity Framework Core](https://img.youtube.com/vi/5eYTvWp_-W8/0.jpg)](https://www.youtube.com/watch?v=5eYTvWp_-W8)
 
+## Enlaces importantes
+* https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/
+* https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions
+
+## Ejemplos de queries
+En el proyecto hay una clase que se llama `DbContextApp`. Dicha clase se encuentra en el namespace Museos, por lo que no es necesario agregar ningun `using`. Sin embargo, si es necesario agregar `using Museos.Tablas` para poder utilizar las clases de las tablas (Modelos).
+
+Si se quiere obtener todas las obras, solo se necesita hacer lo siguiente.
+```c#
+// primero creo una instancia de AppDbContext.
+// Esta variable puede ser de clase y privada si es necesario
+private AppDbContext _db = new()
+
+// ya que tengo mi objeto _db, puedo hacer las consultas.
+// Una forma es
+List<Obra> todasLasObras = _db.Obras.ToList();
+
+// Y la otra utilizando LINQ
+List<Obra> todasLasObras = (from obra in _db.Obras select obra).ToList();
+```
 ## Aquí videos del progreso
 * Creacion de ventanas admin y launcher: https://www.youtube.com/watch?v=TIC-X4BE7Uw
