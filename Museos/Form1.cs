@@ -7,15 +7,31 @@ namespace Museos
 
         public static Form1 Instance { get { return _instance.Value; } }
 
+        private AppDbContext _db;
+
         private Form1()
         {
             InitializeComponent();
+            _db = new AppDbContext();
+
+            if(_db.UsuariosAdmin.Count() < 1)
+            {
+                new CrearCuenta().ShowDialog();
+            }
         }
 
         private void buttonOpenAdmin_Click(object sender, EventArgs e)
         {
-            new Administrador().Show();
-            Hide();
+            if(_db.UsuariosAdmin.Count() < 1)
+            {
+                new CrearCuenta().ShowDialog();
+            } 
+            else
+            {
+                new FormularioLogin().ShowDialog();
+         
+            }
+            
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

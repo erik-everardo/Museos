@@ -59,6 +59,8 @@
             this.ClientSize = new System.Drawing.Size(329, 177);
             this.Controls.Add(this.buttonOpenPublic);
             this.Controls.Add(this.buttonOpenAdmin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
