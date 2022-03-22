@@ -34,3 +34,6 @@ Despues de que hagamos una migración, es necesario actualizar la base de datos.
 
 ## Aqui dejo un video de la configuración.
 [![Proyecto de Base de datos. 1. Configuración Entity Framework Core](https://img.youtube.com/vi/5eYTvWp_-W8/0.jpg)](https://www.youtube.com/watch?v=5eYTvWp_-W8)
+
+## Aquí videos del progreso
+* Creacion de ventanas admin y launcher: https://www.youtube.com/watch?v=TIC-X4BE7Uw
