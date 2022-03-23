@@ -21,5 +21,6 @@ namespace Museos
         public DbSet<Obra> Obras { get; set; }
         public DbSet<UsuarioAdmin> UsuariosAdmin { get; set; } 
         public DbSet<Visitante> Visitantes { get; set; }
+        public DbSet<Museo> Museos { get; set; }
     }
 }

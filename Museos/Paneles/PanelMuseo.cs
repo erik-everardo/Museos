@@ -12,9 +12,17 @@ namespace Museos.Paneles
 {
     public partial class PanelMuseo : UserControl
     {
+        private readonly AppDbContext _db = new();
         public PanelMuseo()
         {
             InitializeComponent();
+
+            if(_db.Museos.Count() < 1)
+            {
+                new FormularioAgregarMuseo().ShowDialog();
+            }
         }
+
+
     }
 }
