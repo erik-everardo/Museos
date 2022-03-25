@@ -57,3 +57,7 @@ List<Obra> todasLasObras = (from obra in _db.Obras select obra).ToList();
 ```
 ## Aquí videos del progreso
 * Creacion de ventanas admin y launcher: https://www.youtube.com/watch?v=TIC-X4BE7Uw
+* Login: https://youtu.be/rrWk9X8ClBc
+* Cómo clonar repositorio privado: https://youtu.be/iQcN-E-N9-M
+* Dialogo para agregar info de museos: https://youtu.be/MUSxklDtAM4
+* Dialogo de agregar obra y avance de lista de obras: https://youtu.be/CjtGKzX2HNE
