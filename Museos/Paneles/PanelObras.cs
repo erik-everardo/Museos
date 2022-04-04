@@ -11,6 +11,8 @@ namespace Museos.Paneles
             TraerObras();
         }
 
+        Image foto;
+
         private void TraerObras()
         {
             Obra[] obras = _db.Obras.ToArray();
@@ -54,6 +56,20 @@ namespace Museos.Paneles
         private void fotografia_Click(object sender, EventArgs e)
         {
             dialogoSeleccionarImagen.ShowDialog();
+        }
+
+        private void dialogoSeleccionarImagen_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            var filestream = dialogoSeleccionarImagen.OpenFile();
+            foto = Image.FromStream(filestream);
+            
+            fotografia.Image = foto.GetThumbnailImage(205,109,null,IntPtr.Zero);
+        }
+
+        private void botonGuardarCambios_Click(object sender, EventArgs e)
+        {
+            // Hay que agregar validaciones
+
         }
     }
 }

@@ -33,7 +33,7 @@
             this.botonAgregarObra = new System.Windows.Forms.Button();
             this.listaObras = new System.Windows.Forms.ListView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botonGuardarCambios = new System.Windows.Forms.Button();
             this.nombre = new System.Windows.Forms.TextBox();
             this.fotografia = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -107,7 +107,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.botonGuardarCambios);
             this.groupBox1.Controls.Add(this.nombre);
             this.groupBox1.Controls.Add(this.fotografia);
             this.groupBox1.Controls.Add(this.label4);
@@ -121,15 +121,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles";
             // 
-            // button1
+            // botonGuardarCambios
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(252, 323);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 25);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Guardar cambios";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botonGuardarCambios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonGuardarCambios.Location = new System.Drawing.Point(252, 323);
+            this.botonGuardarCambios.Name = "botonGuardarCambios";
+            this.botonGuardarCambios.Size = new System.Drawing.Size(112, 25);
+            this.botonGuardarCambios.TabIndex = 6;
+            this.botonGuardarCambios.Text = "Guardar cambios";
+            this.botonGuardarCambios.UseVisualStyleBackColor = true;
+            this.botonGuardarCambios.Click += new System.EventHandler(this.botonGuardarCambios_Click);
             // 
             // nombre
             // 
@@ -190,7 +191,9 @@
             // dialogoSeleccionarImagen
             // 
             this.dialogoSeleccionarImagen.FileName = "openFileDialog1";
+            this.dialogoSeleccionarImagen.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF";
             this.dialogoSeleccionarImagen.Title = "Seleccionar imagen";
+            this.dialogoSeleccionarImagen.FileOk += new System.ComponentModel.CancelEventHandler(this.dialogoSeleccionarImagen_FileOk);
             // 
             // PanelObras
             // 
@@ -227,6 +230,6 @@
         private PictureBox fotografia;
         private Button botonAgregarObra;
         private GroupBox groupBox1;
-        private Button button1;
+        private Button botonGuardarCambios;
     }
 }

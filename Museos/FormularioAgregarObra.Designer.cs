@@ -33,13 +33,13 @@
             this.nombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.descripcion = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.vistaPrevia = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.botonAgregarObra = new System.Windows.Forms.Button();
             this.dialogoSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
             this.fechaIncorporacion = new System.Windows.Forms.DateTimePicker();
             this.Fecha = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaPrevia)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,15 +88,15 @@
             this.descripcion.TabIndex = 4;
             this.descripcion.Text = "";
             // 
-            // pictureBox1
+            // vistaPrevia
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 297);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 108);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.vistaPrevia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.vistaPrevia.Location = new System.Drawing.Point(12, 297);
+            this.vistaPrevia.Name = "vistaPrevia";
+            this.vistaPrevia.Size = new System.Drawing.Size(147, 108);
+            this.vistaPrevia.TabIndex = 5;
+            this.vistaPrevia.TabStop = false;
+            this.vistaPrevia.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label4
             // 
@@ -117,6 +117,12 @@
             this.botonAgregarObra.Text = "Agregar";
             this.botonAgregarObra.UseVisualStyleBackColor = true;
             this.botonAgregarObra.Click += new System.EventHandler(this.botonAgregarObra_Click);
+            // 
+            // dialogoSeleccionarImagen
+            // 
+            this.dialogoSeleccionarImagen.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF";
+            this.dialogoSeleccionarImagen.Title = "Seleccionar imagen";
+            this.dialogoSeleccionarImagen.FileOk += new System.ComponentModel.CancelEventHandler(this.dialogoSeleccionarImagen_FileOk);
             // 
             // fechaIncorporacion
             // 
@@ -143,7 +149,7 @@
             this.Controls.Add(this.fechaIncorporacion);
             this.Controls.Add(this.botonAgregarObra);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.vistaPrevia);
             this.Controls.Add(this.descripcion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nombre);
@@ -151,7 +157,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormularioAgregarObra";
             this.Text = "FormularioAgregarObra";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaPrevia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,7 +170,7 @@
         private TextBox nombre;
         private Label label3;
         private RichTextBox descripcion;
-        private PictureBox pictureBox1;
+        private PictureBox vistaPrevia;
         private Label label4;
         private Button botonAgregarObra;
         private OpenFileDialog dialogoSeleccionarImagen;

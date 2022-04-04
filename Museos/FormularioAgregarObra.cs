@@ -21,6 +21,8 @@ namespace Museos
             InitializeComponent();
         }
 
+        private byte[] imagen;
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             dialogoSeleccionarImagen.ShowDialog();
@@ -28,14 +30,12 @@ namespace Museos
 
         private void botonAgregarObra_Click(object sender, EventArgs e)
         {
-
-            byte[] data = new byte[0];
             Obra nuevaObra = new()
             {
                 Nombre = nombre.Text,
                 Detalles = descripcion.Text,
                 FechaIncorporacion = fechaIncorporacion.Value,
-                FotoData = data
+                FotoData = imagen
             };
 
             _db.Obras.Add(nuevaObra);
@@ -43,6 +43,16 @@ namespace Museos
 
             MessageBox.Show("Obra agregada exitosamente");
             Close();
+        }
+
+        private async void dialogoSeleccionarImagen_FileOk(object sender, CancelEventArgs e)
+        {
+            vistaPrevia.Image = Image.FromStream(dialogoSeleccionarImagen.OpenFile()).GetThumbnailImage(147,108,null, IntPtr.Zero);
+            var fileStream = dialogoSeleccionarImagen.OpenFile();
+            var length = fileStream.Length;
+            byte[] data = new byte[length];
+            fileStream.Read(data);
+            imagen = data;
         }
     }
 }
