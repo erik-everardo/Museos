@@ -35,17 +35,18 @@ namespace Museos
                 Nombre = nombre.Text,
                 Detalles = descripcion.Text,
                 FechaIncorporacion = fechaIncorporacion.Value,
-                FotoData = imagen
+                FotoData = Convert.ToBase64String(imagen)
             };
 
             _db.Obras.Add(nuevaObra);
             _db.SaveChanges();
 
             MessageBox.Show("Obra agregada exitosamente");
+            DialogResult = DialogResult.OK;
             Close();
         }
 
-        private async void dialogoSeleccionarImagen_FileOk(object sender, CancelEventArgs e)
+        private void dialogoSeleccionarImagen_FileOk(object sender, CancelEventArgs e)
         {
             vistaPrevia.Image = Image.FromStream(dialogoSeleccionarImagen.OpenFile()).GetThumbnailImage(147,108,null, IntPtr.Zero);
             var fileStream = dialogoSeleccionarImagen.OpenFile();

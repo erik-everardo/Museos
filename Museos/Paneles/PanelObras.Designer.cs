@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.listaDeObras = new System.Windows.Forms.FlowLayoutPanel();
             this.botonAgregarObra = new System.Windows.Forms.Button();
-            this.listaObras = new System.Windows.Forms.ListView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.botonGuardarCambios = new System.Windows.Forms.Button();
             this.nombre = new System.Windows.Forms.TextBox();
@@ -69,8 +69,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.listaDeObras);
             this.splitContainer1.Panel1.Controls.Add(this.botonAgregarObra);
-            this.splitContainer1.Panel1.Controls.Add(this.listaObras);
             // 
             // splitContainer1.Panel2
             // 
@@ -78,6 +78,18 @@
             this.splitContainer1.Size = new System.Drawing.Size(564, 360);
             this.splitContainer1.SplitterDistance = 187;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // listaDeObras
+            // 
+            this.listaDeObras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listaDeObras.AutoScroll = true;
+            this.listaDeObras.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.listaDeObras.Location = new System.Drawing.Point(3, 36);
+            this.listaDeObras.Name = "listaDeObras";
+            this.listaDeObras.Size = new System.Drawing.Size(181, 321);
+            this.listaDeObras.TabIndex = 3;
             // 
             // botonAgregarObra
             // 
@@ -89,18 +101,6 @@
             this.botonAgregarObra.Text = "Agregar";
             this.botonAgregarObra.UseVisualStyleBackColor = true;
             this.botonAgregarObra.Click += new System.EventHandler(this.botonAgregarObra_Click);
-            // 
-            // listaObras
-            // 
-            this.listaObras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listaObras.Location = new System.Drawing.Point(0, 36);
-            this.listaObras.MultiSelect = false;
-            this.listaObras.Name = "listaObras";
-            this.listaObras.Size = new System.Drawing.Size(187, 324);
-            this.listaObras.TabIndex = 0;
-            this.listaObras.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox1
             // 
@@ -220,7 +220,6 @@
 
         private Label label1;
         private SplitContainer splitContainer1;
-        private ListView listaObras;
         private Label label3;
         private TextBox nombre;
         private Label label2;
@@ -231,5 +230,6 @@
         private Button botonAgregarObra;
         private GroupBox groupBox1;
         private Button botonGuardarCambios;
+        private FlowLayoutPanel listaDeObras;
     }
 }
