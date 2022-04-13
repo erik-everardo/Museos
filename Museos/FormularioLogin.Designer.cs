@@ -101,7 +101,7 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsuario);
             this.Name = "FormularioLogin";
-            this.Text = "FormularioLogin";
+            this.Text = "Iniciar sesión";
             this.ResumeLayout(false);
             this.PerformLayout();
 

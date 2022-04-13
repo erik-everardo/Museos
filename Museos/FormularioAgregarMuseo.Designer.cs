@@ -121,7 +121,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.botonAceptar);
             this.Name = "FormularioAgregarMuseo";
-            this.Text = "FormularioAgregarMuseo";
+            this.Text = "Agregar museo";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

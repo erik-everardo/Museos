@@ -156,7 +156,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormularioAgregarObra";
-            this.Text = "FormularioAgregarObra";
+            this.Text = "Agregar obra";
             ((System.ComponentModel.ISupportInitialize)(this.vistaPrevia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
