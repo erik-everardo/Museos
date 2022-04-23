@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Museos.PanelesPublicos;
 
 namespace Museos
 {
@@ -19,6 +11,11 @@ namespace Museos
             isFullscreen = true;
             GoFullScreen(true);
         }
+
+        private Inicio _panelInicio = new();
+        private Museo _panelMuseo = new();
+        private Obras _panelObras = new();
+        private Boleto _panelBoleto = new();
 
         private void Publico_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -52,6 +49,42 @@ namespace Museos
                 this.WindowState = FormWindowState.Maximized;
                 this.FormBorderStyle = FormBorderStyle.Sizable;
             }
+        }
+
+        private void botonInicio_Click(object sender, EventArgs e)
+        {
+            if(tabla.Controls.Count > 1)
+            {
+                tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
+            }
+            tabla.Controls.Add(_panelInicio, 0, 0);
+        }
+
+        private void botonMuseo_Click(object sender, EventArgs e)
+        {
+            if (tabla.Controls.Count > 1)
+            {
+                tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
+            }
+            tabla.Controls.Add(_panelMuseo, 0, 0);
+        }
+
+        private void botonObras_Click(object sender, EventArgs e)
+        {
+            if (tabla.Controls.Count > 1)
+            {
+                tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
+            }
+            tabla.Controls.Add(_panelObras, 0, 0);
+        }
+
+        private void botonBoleto_Click(object sender, EventArgs e)
+        {
+            if (tabla.Controls.Count > 1)
+            {
+                tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
+            }
+            tabla.Controls.Add(_panelBoleto, 0, 0);
         }
     }
 }

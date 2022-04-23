@@ -29,70 +29,92 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.botonInicio = new System.Windows.Forms.Button();
+            this.botonMuseo = new System.Windows.Forms.Button();
+            this.botonObras = new System.Windows.Forms.Button();
+            this.botonBoleto = new System.Windows.Forms.Button();
+            this.tabla = new System.Windows.Forms.TableLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
+            this.tabla.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 434);
+            this.flowLayoutPanel1.Controls.Add(this.botonInicio);
+            this.flowLayoutPanel1.Controls.Add(this.botonMuseo);
+            this.flowLayoutPanel1.Controls.Add(this.botonObras);
+            this.flowLayoutPanel1.Controls.Add(this.botonBoleto);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 386);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(850, 33);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(844, 33);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // botonInicio
             // 
-            this.button1.Location = new System.Drawing.Point(13, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botonInicio.Location = new System.Drawing.Point(13, 3);
+            this.botonInicio.Name = "botonInicio";
+            this.botonInicio.Size = new System.Drawing.Size(75, 23);
+            this.botonInicio.TabIndex = 0;
+            this.botonInicio.Text = "Inicio";
+            this.botonInicio.UseVisualStyleBackColor = true;
+            this.botonInicio.Click += new System.EventHandler(this.botonInicio_Click);
             // 
-            // button2
+            // botonMuseo
             // 
-            this.button2.Location = new System.Drawing.Point(94, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.botonMuseo.Location = new System.Drawing.Point(94, 3);
+            this.botonMuseo.Name = "botonMuseo";
+            this.botonMuseo.Size = new System.Drawing.Size(75, 23);
+            this.botonMuseo.TabIndex = 1;
+            this.botonMuseo.Text = "Museo";
+            this.botonMuseo.UseVisualStyleBackColor = true;
+            this.botonMuseo.Click += new System.EventHandler(this.botonMuseo_Click);
             // 
-            // button3
+            // botonObras
             // 
-            this.button3.Location = new System.Drawing.Point(175, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.botonObras.Location = new System.Drawing.Point(175, 3);
+            this.botonObras.Name = "botonObras";
+            this.botonObras.Size = new System.Drawing.Size(75, 23);
+            this.botonObras.TabIndex = 2;
+            this.botonObras.Text = "Obras";
+            this.botonObras.UseVisualStyleBackColor = true;
+            this.botonObras.Click += new System.EventHandler(this.botonObras_Click);
             // 
-            // button4
+            // botonBoleto
             // 
-            this.button4.Location = new System.Drawing.Point(256, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.botonBoleto.Location = new System.Drawing.Point(256, 3);
+            this.botonBoleto.Name = "botonBoleto";
+            this.botonBoleto.Size = new System.Drawing.Size(75, 23);
+            this.botonBoleto.TabIndex = 3;
+            this.botonBoleto.Text = "Boleto";
+            this.botonBoleto.UseVisualStyleBackColor = true;
+            this.botonBoleto.Click += new System.EventHandler(this.botonBoleto_Click);
+            // 
+            // tabla
+            // 
+            this.tabla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabla.ColumnCount = 1;
+            this.tabla.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tabla.Controls.Add(this.flowLayoutPanel1, 0, 1);
+            this.tabla.Location = new System.Drawing.Point(12, 45);
+            this.tabla.Name = "tabla";
+            this.tabla.RowCount = 2;
+            this.tabla.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tabla.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tabla.Size = new System.Drawing.Size(850, 422);
+            this.tabla.TabIndex = 2;
             // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(787, 12);
+            this.button5.Location = new System.Drawing.Point(748, 12);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 43);
+            this.button5.Size = new System.Drawing.Size(114, 27);
             this.button5.TabIndex = 1;
             this.button5.Text = "Pantalla completa";
             this.button5.UseVisualStyleBackColor = true;
@@ -103,12 +125,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 479);
+            this.Controls.Add(this.tabla);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Publico";
             this.Text = "Publico";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Publico_FormClosing);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.tabla.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -116,10 +139,11 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button botonInicio;
+        private Button botonMuseo;
+        private Button botonObras;
+        private Button botonBoleto;
+        private TableLayoutPanel tabla;
         private Button button5;
     }
 }
