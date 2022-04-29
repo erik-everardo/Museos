@@ -33,6 +33,7 @@
             this.listaDeObras = new System.Windows.Forms.FlowLayoutPanel();
             this.botonAgregarObra = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.botonEliminarObra = new System.Windows.Forms.Button();
             this.botonGuardarCambios = new System.Windows.Forms.Button();
             this.nombre = new System.Windows.Forms.TextBox();
             this.fotografia = new System.Windows.Forms.PictureBox();
@@ -107,6 +108,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.botonEliminarObra);
             this.groupBox1.Controls.Add(this.botonGuardarCambios);
             this.groupBox1.Controls.Add(this.nombre);
             this.groupBox1.Controls.Add(this.fotografia);
@@ -120,6 +122,17 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles";
+            // 
+            // botonEliminarObra
+            // 
+            this.botonEliminarObra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.botonEliminarObra.Location = new System.Drawing.Point(6, 324);
+            this.botonEliminarObra.Name = "botonEliminarObra";
+            this.botonEliminarObra.Size = new System.Drawing.Size(75, 23);
+            this.botonEliminarObra.TabIndex = 7;
+            this.botonEliminarObra.Text = "Eliminar";
+            this.botonEliminarObra.UseVisualStyleBackColor = true;
+            this.botonEliminarObra.Click += new System.EventHandler(this.botonEliminarObra_Click);
             // 
             // botonGuardarCambios
             // 
@@ -138,6 +151,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nombre.Location = new System.Drawing.Point(6, 33);
             this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             this.nombre.Size = new System.Drawing.Size(358, 23);
             this.nombre.TabIndex = 1;
             // 
@@ -184,6 +198,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.detalles.Location = new System.Drawing.Point(6, 82);
             this.detalles.Name = "detalles";
+            this.detalles.ReadOnly = true;
             this.detalles.Size = new System.Drawing.Size(358, 96);
             this.detalles.TabIndex = 3;
             this.detalles.Text = "";
@@ -231,5 +246,6 @@
         private GroupBox groupBox1;
         private Button botonGuardarCambios;
         private FlowLayoutPanel listaDeObras;
+        private Button botonEliminarObra;
     }
 }

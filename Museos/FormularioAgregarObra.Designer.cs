@@ -39,7 +39,9 @@
             this.dialogoSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
             this.fechaIncorporacion = new System.Windows.Forms.DateTimePicker();
             this.Fecha = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.vistaPrevia)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +93,7 @@
             // vistaPrevia
             // 
             this.vistaPrevia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.vistaPrevia.Location = new System.Drawing.Point(12, 297);
+            this.vistaPrevia.Location = new System.Drawing.Point(3, 3);
             this.vistaPrevia.Name = "vistaPrevia";
             this.vistaPrevia.Size = new System.Drawing.Size(147, 108);
             this.vistaPrevia.TabIndex = 5;
@@ -140,16 +142,28 @@
             this.Fecha.TabIndex = 9;
             this.Fecha.Text = "Fecha de incorporación";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.vistaPrevia);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 311);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(355, 71);
+            this.flowLayoutPanel1.TabIndex = 10;
+            // 
             // FormularioAgregarObra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 423);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.Fecha);
             this.Controls.Add(this.fechaIncorporacion);
             this.Controls.Add(this.botonAgregarObra);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.vistaPrevia);
             this.Controls.Add(this.descripcion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nombre);
@@ -158,6 +172,7 @@
             this.Name = "FormularioAgregarObra";
             this.Text = "Agregar obra";
             ((System.ComponentModel.ISupportInitialize)(this.vistaPrevia)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +191,6 @@
         private OpenFileDialog dialogoSeleccionarImagen;
         private DateTimePicker fechaIncorporacion;
         private Label Fecha;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
