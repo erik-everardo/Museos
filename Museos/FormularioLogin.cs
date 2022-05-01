@@ -31,6 +31,7 @@ namespace Museos
 
             if (result == PasswordVerificationResult.Success)
             {
+                EstadoLogin.UserId = usuarioAdmin.Id;
                 AbrirVentanaAdministrador();
             } 
             else

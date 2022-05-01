@@ -1,20 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Museos.Paneles
+﻿namespace Museos.Paneles
 {
     public partial class PanelAjustes : UserControl
     {
         public PanelAjustes()
         {
             InitializeComponent();
+        }
+        private void PanelAjustes_Load(object sender, EventArgs e)
+        {
+            TraerNombre();
+        }
+
+        private void btnCambiarPass_Click(object sender, EventArgs e)
+        {
+            new DialogoCambiarPass().ShowDialog();
+        }
+
+        private void btnCrearCuenta_Click(object sender, EventArgs e)
+        {
+            new CrearCuenta().ShowDialog();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TraerNombre()
+        {
+            var db = new AppDbContext();
+            var user = db.UsuariosAdmin.Find(EstadoLogin.UserId);
+            if (user == null)
+            {
+                nombre.Text = "Null";
+                return;
+            }
+            nombre.Text = user.Nombre;
+        }
+
+        private void btnCambiarNombre_Click(object sender, EventArgs e)
+        {
+            var result = new DialogoCambiarNombre().ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                TraerNombre();
+            }
         }
     }
 }
