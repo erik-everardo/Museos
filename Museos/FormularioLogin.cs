@@ -25,16 +25,23 @@ namespace Museos
 
             PasswordHasher<string> hasher = new PasswordHasher<string>();
 
-            UsuarioAdmin usuarioAdmin = _db.UsuariosAdmin.Single(usuario => usuario.Nombre.Equals(nombreDeUsuario));
-
-            PasswordVerificationResult result = hasher.VerifyHashedPassword(nombreDeUsuario, usuarioAdmin.PasswordHash, password);
-
-            if (result == PasswordVerificationResult.Success)
+            try
             {
-                EstadoLogin.UserId = usuarioAdmin.Id;
-                AbrirVentanaAdministrador();
-            } 
-            else
+                UsuarioAdmin usuarioAdmin = _db.UsuariosAdmin.Single(usuario => usuario.Nombre.Equals(nombreDeUsuario));
+
+                PasswordVerificationResult result = hasher.VerifyHashedPassword(nombreDeUsuario, usuarioAdmin.PasswordHash, password);
+
+                if (result == PasswordVerificationResult.Success)
+                {
+                    EstadoLogin.UserId = usuarioAdmin.Id;
+                    AbrirVentanaAdministrador();
+                }
+                else
+                {
+                    MessageBox.Show("Nombre de usuario o contraseña incorrectos");
+                }
+            }
+            catch (InvalidOperationException)
             {
                 MessageBox.Show("Nombre de usuario o contraseña incorrectos");
             }

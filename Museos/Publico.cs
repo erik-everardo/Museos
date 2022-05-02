@@ -86,5 +86,23 @@ namespace Museos
             }
             tabla.Controls.Add(_panelBoleto, 0, 0);
         }
+
+        private void Publico_Load(object sender, EventArgs e)
+        {
+            var db = new AppDbContext();
+            if(db.Museos.Count() < 1)
+            {
+                var result = new FormularioAgregarMuseo().ShowDialog();
+                if(result != DialogResult.OK)
+                {
+                    MessageBox.Show("No se puede continuar sin agregar museo");
+                }
+            }
+            if (tabla.Controls.Count > 1)
+            {
+                tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
+            }
+            tabla.Controls.Add(_panelInicio, 0, 0);
+        }
     }
 }

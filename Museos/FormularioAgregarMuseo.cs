@@ -23,6 +23,7 @@ namespace Museos
 
             _db.Museos.Add(nuevoMuseo);
             _db.SaveChanges();
+            DialogResult = DialogResult.OK;
             Close();
         }
     }

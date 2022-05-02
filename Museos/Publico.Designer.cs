@@ -130,6 +130,7 @@
             this.Name = "Publico";
             this.Text = "Publico";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Publico_FormClosing);
+            this.Load += new System.EventHandler(this.Publico_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.tabla.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -16,5 +16,23 @@ namespace Museos.PanelesPublicos
         {
             InitializeComponent();
         }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            TraerInfoMuseo();
+        }
+
+        private void TraerInfoMuseo()
+        {
+            var db = new AppDbContext();
+            var museo = db.Museos.First();
+            if (museo == null)
+            {
+                MessageBox.Show("No hay información");
+                return;
+            }
+
+            textoBienvenidoA.Text = $"Bienvenido/a a {museo.Nombre}"; 
+        }
     }
 }

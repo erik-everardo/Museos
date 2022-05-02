@@ -28,25 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.textoBienvenidoA = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // textoBienvenidoA
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Panel inicio";
+            this.textoBienvenidoA.AutoSize = true;
+            this.textoBienvenidoA.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textoBienvenidoA.Location = new System.Drawing.Point(21, 21);
+            this.textoBienvenidoA.Name = "textoBienvenidoA";
+            this.textoBienvenidoA.Size = new System.Drawing.Size(385, 72);
+            this.textoBienvenidoA.TabIndex = 0;
+            this.textoBienvenidoA.Text = "Bienvenido/a a";
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textoBienvenidoA);
             this.Name = "Inicio";
-            this.Size = new System.Drawing.Size(400, 247);
+            this.Size = new System.Drawing.Size(885, 581);
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -54,6 +56,6 @@
 
         #endregion
 
-        private Label label1;
+        private Label textoBienvenidoA;
     }
 }
