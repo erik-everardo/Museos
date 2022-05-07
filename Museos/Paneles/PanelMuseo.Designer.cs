@@ -36,6 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.fechaFundación = new System.Windows.Forms.DateTimePicker();
             this.botonGuardar = new System.Windows.Forms.Button();
+            this.btnImagenInterativa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -107,11 +108,22 @@
             this.botonGuardar.UseVisualStyleBackColor = true;
             this.botonGuardar.Click += new System.EventHandler(this.botonGuardar_Click);
             // 
+            // btnImagenInterativa
+            // 
+            this.btnImagenInterativa.Location = new System.Drawing.Point(23, 357);
+            this.btnImagenInterativa.Name = "btnImagenInterativa";
+            this.btnImagenInterativa.Size = new System.Drawing.Size(109, 23);
+            this.btnImagenInterativa.TabIndex = 8;
+            this.btnImagenInterativa.Text = "Imagen interativa";
+            this.btnImagenInterativa.UseVisualStyleBackColor = true;
+            this.btnImagenInterativa.Click += new System.EventHandler(this.btnImagenInterativa_Click);
+            // 
             // PanelMuseo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.btnImagenInterativa);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.fechaFundación);
             this.Controls.Add(this.label4);
@@ -137,5 +149,6 @@
         private Label label4;
         private DateTimePicker fechaFundación;
         private Button botonGuardar;
+        private Button btnImagenInterativa;
     }
 }

@@ -34,6 +34,8 @@
             this.botonObras = new System.Windows.Forms.Button();
             this.botonOpiniones = new System.Windows.Forms.Button();
             this.botonAjustes = new System.Windows.Forms.Button();
+            this.btnOpenDataDir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +68,8 @@
             this.flowLayoutPanel1.Controls.Add(this.botonObras);
             this.flowLayoutPanel1.Controls.Add(this.botonOpiniones);
             this.flowLayoutPanel1.Controls.Add(this.botonAjustes);
+            this.flowLayoutPanel1.Controls.Add(this.btnOpenDataDir);
+            this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -116,6 +120,27 @@
             this.botonAjustes.UseVisualStyleBackColor = true;
             this.botonAjustes.Click += new System.EventHandler(this.botonAjustes_Click);
             // 
+            // btnOpenDataDir
+            // 
+            this.btnOpenDataDir.Location = new System.Drawing.Point(3, 187);
+            this.btnOpenDataDir.Name = "btnOpenDataDir";
+            this.btnOpenDataDir.Size = new System.Drawing.Size(200, 23);
+            this.btnOpenDataDir.TabIndex = 4;
+            this.btnOpenDataDir.Text = "Abrir directorio de datos";
+            this.btnOpenDataDir.UseVisualStyleBackColor = true;
+            this.btnOpenDataDir.Click += new System.EventHandler(this.btnOpenDataDir_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 253);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 40, 3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Boletos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -142,5 +167,7 @@
         private Button botonObras;
         private Button botonOpiniones;
         private Button botonAjustes;
+        private Button btnOpenDataDir;
+        private Button button1;
     }
 }

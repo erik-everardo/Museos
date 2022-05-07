@@ -5,17 +5,28 @@ namespace Museos
     public partial class Publico : Form
     {
         private bool isFullscreen = false;
+        private const AnchorStyles anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+        private readonly AppDbContext _db;
         public Publico()
         {
+            _db = new AppDbContext();
             InitializeComponent();
             isFullscreen = true;
             GoFullScreen(true);
+            botonMuseo.Text = _db.Museos.First().Nombre;
         }
-
-        private Inicio _panelInicio = new();
-        private Museo _panelMuseo = new();
-        private Obras _panelObras = new();
-        private Boleto _panelBoleto = new();
+        private Museo _panelMuseo = new()
+        {
+            Anchor = anchor
+        };
+        private Obras _panelObras = new()
+        {
+            Anchor = anchor
+        };
+        private Boleto _panelBoleto = new()
+        {
+            Anchor = anchor
+        };
 
         private void Publico_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -51,15 +62,6 @@ namespace Museos
             }
         }
 
-        private void botonInicio_Click(object sender, EventArgs e)
-        {
-            if(tabla.Controls.Count > 1)
-            {
-                tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
-            }
-            tabla.Controls.Add(_panelInicio, 0, 0);
-        }
-
         private void botonMuseo_Click(object sender, EventArgs e)
         {
             if (tabla.Controls.Count > 1)
@@ -67,6 +69,7 @@ namespace Museos
                 tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
             }
             tabla.Controls.Add(_panelMuseo, 0, 0);
+            titulo.Text = "Museo";
         }
 
         private void botonObras_Click(object sender, EventArgs e)
@@ -76,6 +79,7 @@ namespace Museos
                 tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
             }
             tabla.Controls.Add(_panelObras, 0, 0);
+            titulo.Text = "Obras";
         }
 
         private void botonBoleto_Click(object sender, EventArgs e)
@@ -85,6 +89,7 @@ namespace Museos
                 tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
             }
             tabla.Controls.Add(_panelBoleto, 0, 0);
+            titulo.Text = "Boleto";
         }
 
         private void Publico_Load(object sender, EventArgs e)
@@ -102,7 +107,8 @@ namespace Museos
             {
                 tabla.Controls.RemoveAt(tabla.Controls.Count - 1);
             }
-            tabla.Controls.Add(_panelInicio, 0, 0);
+            titulo.Text = "Museo";
+            tabla.Controls.Add(_panelMuseo, 0, 0);
         }
     }
 }

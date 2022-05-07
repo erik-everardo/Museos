@@ -1,4 +1,5 @@
 ﻿using Museos.Paneles;
+using System.Diagnostics;
 
 namespace Museos
 {
@@ -8,6 +9,9 @@ namespace Museos
         private PanelObras panelObras = new();
         private PanelValoraciones panelValoraciones = new();
         private PanelAjustes panelAjustes = new();
+        private PanelBoletos panelBoletos = new();
+
+        
 
         public Administrador()
         {
@@ -21,7 +25,7 @@ namespace Museos
 
         private void Administrador_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Administrador_FormClosing(object sender, FormClosingEventArgs e)
@@ -68,6 +72,22 @@ namespace Museos
                 tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);
             }
             tableLayoutPanel1.Controls.Add(panelAjustes, 1, 0);
+        }
+
+        private void btnOpenDataDir_Click(object sender, EventArgs e)
+        {
+            var appDir = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\MuseosEQ3";
+            Process.Start("explorer.exe",appDir);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (tableLayoutPanel1.Controls.Count > 1)
+            {
+                tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);
+            }
+            tableLayoutPanel1.Controls.Add(panelBoletos, 1, 0);
+
         }
     }
 }

@@ -7,12 +7,11 @@ namespace Museos
 
         public static Form1 Instance { get { return _instance.Value; } }
 
-        private AppDbContext _db;
+        private readonly AppDbContext _db = new();
 
         private Form1()
         {
             InitializeComponent();
-            _db = new AppDbContext();
 
             if(_db.UsuariosAdmin.Count() < 1)
             {

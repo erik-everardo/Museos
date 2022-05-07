@@ -1,13 +1,4 @@
 ﻿using Museos.Tablas;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Museos.PanelesPublicos
 {
@@ -31,6 +22,15 @@ namespace Museos.PanelesPublicos
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 Width = 200
             });
+            if(obras.Length < 1)
+            {
+                listaDeObras.Controls.Add(new Label()
+                {
+                    Text = "No hay obras que mostrar",
+                    Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point),
+                    AutoSize = true
+                });
+            }
             foreach (var obra in obras)
             {
                 Label text = new()
@@ -41,7 +41,8 @@ namespace Museos.PanelesPublicos
                     Margin = new Padding(5),
                     Padding = new Padding(5),
                     Cursor = Cursors.Hand,
-                    Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point)
+                    Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point),
+                    BackColor = Color.White
             };
                 text.Click += (object? sender, EventArgs e) =>
                 {
@@ -57,6 +58,9 @@ namespace Museos.PanelesPublicos
             nombre.Text = obra.Nombre;
             detalles.Text = obra.Detalles;
             obraEnVistaPrevia = obra;
+            detalles.Visible = true;
+            nombre.Visible = true;
+            flowLayoutPanel2.Visible = true;
 
             if (obra.FotoData != null && Convert.FromBase64String(obra.FotoData).Length > 0)
             {
@@ -87,9 +91,9 @@ namespace Museos.PanelesPublicos
                         }
                     }
 
-                    fotografia.Width = scaledWidth;
-                    fotografia.Height = scaledHeight;
-                    fotografia.Image = image.GetThumbnailImage(scaledWidth, scaledHeight, null, IntPtr.Zero);
+                    fotografia.Width = scaledWidth - 30;
+                    fotografia.Height = scaledHeight - 30;
+                    fotografia.Image = image.GetThumbnailImage(scaledWidth - 30, scaledHeight - 30, null, IntPtr.Zero);
                     memoryStream.Close();
                 }
                 catch (ArgumentException)
@@ -103,6 +107,11 @@ namespace Museos.PanelesPublicos
         private void Obras_Load(object sender, EventArgs e)
         {
             TraerObras();
+        }
+
+        private void Obras_AutoSizeChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

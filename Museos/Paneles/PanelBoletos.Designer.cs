@@ -1,6 +1,6 @@
-﻿namespace Museos.PanelesPublicos
+﻿namespace Museos.Paneles
 {
-    partial class Inicio
+    partial class PanelBoletos
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,35 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textoBienvenidoA = new System.Windows.Forms.Label();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textoBienvenidoA
+            // btnGenerar
             // 
-            this.textoBienvenidoA.AutoSize = true;
-            this.textoBienvenidoA.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textoBienvenidoA.Location = new System.Drawing.Point(21, 21);
-            this.textoBienvenidoA.Name = "textoBienvenidoA";
-            this.textoBienvenidoA.Size = new System.Drawing.Size(385, 72);
-            this.textoBienvenidoA.TabIndex = 0;
-            this.textoBienvenidoA.Text = "Bienvenido/a a";
+            this.btnGenerar.Location = new System.Drawing.Point(617, 458);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.TabIndex = 0;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
-            // Inicio
+            // PanelBoletos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.Controls.Add(this.textoBienvenidoA);
-            this.Name = "Inicio";
-            this.Size = new System.Drawing.Size(885, 581);
-            this.Load += new System.EventHandler(this.Inicio_Load);
+            this.Controls.Add(this.btnGenerar);
+            this.Name = "PanelBoletos";
+            this.Size = new System.Drawing.Size(695, 484);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Label textoBienvenidoA;
+        private Button btnGenerar;
     }
 }

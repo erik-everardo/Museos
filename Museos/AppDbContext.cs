@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using Museos.Tablas;
 
 namespace Museos
@@ -13,7 +9,9 @@ namespace Museos
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=base_de_datos.db;Cache=Shared");
+            var appDir = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\MuseosEQ3";
+            Directory.CreateDirectory(appDir);
+            optionsBuilder.UseSqlite(@$"Data Source={appDir}\base_de_datos.db;Cache=Shared");
         }
          
         public DbSet<Comentario> Comentarios { get; set; }
@@ -22,5 +20,6 @@ namespace Museos
         public DbSet<UsuarioAdmin> UsuariosAdmin { get; set; } 
         public DbSet<Visitante> Visitantes { get; set; }
         public DbSet<Museo> Museos { get; set; }
+        public DbSet<Boleto> Boletos { get; set; }
     }
 }

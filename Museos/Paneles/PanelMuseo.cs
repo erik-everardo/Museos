@@ -51,5 +51,10 @@ namespace Museos.Paneles
             _db.SaveChanges();
             MessageBox.Show("Se ha actualizado la información adecuadamente");
         }
+
+        private void btnImagenInterativa_Click(object sender, EventArgs e)
+        {
+            new DialogoCrearImagenInteractiva().ShowDialog();
+        }
     }
 }
