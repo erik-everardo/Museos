@@ -21,6 +21,7 @@ namespace Museos
             panelObras.Anchor = anchor;
             panelValoraciones.Anchor = anchor;
             panelAjustes.Anchor = anchor;
+            panelBoletos.Anchor = anchor;
         }
 
         private void Administrador_Load(object sender, EventArgs e)
@@ -82,6 +83,7 @@ namespace Museos
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if (tableLayoutPanel1.Controls.Count > 1)
             {
                 tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);

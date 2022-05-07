@@ -113,5 +113,26 @@ namespace Museos.PanelesPublicos
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(obraEnVistaPrevia != null)
+            {
+                new DialogoNuevaOpinion(obraEnVistaPrevia.Id).ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No hay obra que comentar");
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(obraEnVistaPrevia != null)
+            {
+                new DialogoVerOpiniones(obraEnVistaPrevia.Id).ShowDialog();
+            }
+        }
     }
 }
