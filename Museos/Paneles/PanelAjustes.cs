@@ -21,11 +21,6 @@
             new CrearCuenta().ShowDialog();
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void TraerNombre()
         {
             var db = new AppDbContext();
