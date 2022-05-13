@@ -61,3 +61,7 @@ List<Obra> todasLasObras = (from obra in _db.Obras select obra).ToList();
 * Cómo clonar repositorio privado: https://youtu.be/iQcN-E-N9-M
 * Dialogo para agregar info de museos: https://youtu.be/MUSxklDtAM4
 * Dialogo de agregar obra y avance de lista de obras: https://youtu.be/CjtGKzX2HNE
+* Guardando imagenes en la base de datos: https://www.youtube.com/watch?v=8zZZBYVPZJY
+* Solución a "No se ha encontrado la tabla": https://www.youtube.com/watch?v=vz0KaWqR-bA
+* Especificaciones del proyecto: https://www.youtube.com/watch?v=RTcrB2VDK9U
+* Proyecto casi terminado: https://www.youtube.com/watch?v=bjNrwQ0SPfM
